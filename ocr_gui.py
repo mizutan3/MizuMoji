@@ -9,7 +9,9 @@ import time
 from difflib import SequenceMatcher
 import re
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # You need to specify the path here
+# If Tesseract is not in PATH, uncomment and adjust:
+# pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'  # Linux example
+# or leave it commented → let user set it via env var or install properly
 
 def clean_text_japanese(text):
     """Removes extra characters, spaces, and joins fragmented words in Japanese text."""
